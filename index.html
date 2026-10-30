@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f3ec">
+    <meta name="description" content="A calm, thoughtful space to explore the Bhagavad Gita, one chapter and one reflection at a time.">
+    <title>Gita — A little wisdom, every day</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Gita home">
+        <span class="brand-mark" aria-hidden="true">ॐ</span>
+        <span>gita<span class="brand-period">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-i18n="navHome">Home</a>
+        <a class="nav-link" href="#chapters" data-i18n="navChapters">Chapters</a>
+        <a class="nav-link" href="#practice" data-i18n="navPractice">My practice</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">हिंदी</button>
+        <button class="avatar" type="button" aria-label="Your profile">Y</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="welcome section-wrap" aria-labelledby="welcomeTitle">
+        <div class="welcome-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">YOUR DAILY MOMENT OF CLARITY</span></p>
+          <h1 id="welcomeTitle"><span data-i18n="welcomeLine1">A little wisdom,</span><br><span class="title-accent" data-i18n="welcomeLine2">every day.</span></h1>
+          <p class="welcome-text" data-i18n="welcomeText">Explore the Bhagavad Gita at your own pace. Begin wherever you are.</p>
+          <a class="button button-dark" href="#chapters"><span data-i18n="exploreButton">Explore the Gita</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="sun-halo"></div>
+          <div class="sun"></div>
+          <svg class="lotus-art" viewBox="0 0 310 255" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M155 225C152 187 153 145 155 88M155 174C118 139 87 133 53 141C72 171 105 190 155 192M155 168C191 129 223 122 258 130C237 163 205 181 155 186M155 140C137 104 140 74 155 46C172 75 174 106 155 140ZM151 199C120 217 98 222 72 218M159 199C190 216 213 220 240 215M139 226H171" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M155 223C133 205 111 199 92 201M155 222C177 204 199 198 219 199M155 129C143 112 131 103 117 98M157 128C171 110 185 102 201 97" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="155" cy="47" r="3" fill="currentColor"/>
+          </svg>
+          <span class="art-caption">श्रीमद्भगवद्गीता</span>
+          <span class="art-orbit orbit-one"></span>
+          <span class="art-orbit orbit-two"></span>
+        </div>
+      </section>
+
+      <section class="dashboard section-wrap" id="dashboard" aria-label="Your learning dashboard">
+        <article class="verse-card" id="practice">
+          <div class="card-topline">
+            <div>
+              <p class="eyebrow small-eyebrow"><span class="sun-icon" aria-hidden="true">✳</span><span data-i18n="verseOfDay">VERSE FOR TODAY</span></p>
+              <p class="verse-reference" data-i18n="verseReference">CHAPTER 2 · VERSE 47</p>
+            </div>
+            <button class="icon-button bookmark-button" id="bookmarkButton" type="button" aria-label="Save verse" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75h10.5v15l-5.25-3.5-5.25 3.5v-15Z"/></svg>
+            </button>
+          </div>
+          <p class="sanskrit" lang="sa">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥</p>
+          <div class="verse-divider"><span></span><span class="divider-flower" aria-hidden="true">✳</span><span></span></div>
+          <p class="verse-meaning" id="verseMeaning">You have the right to your actions, not to the fruits they bring. Let your work be your focus—not its reward—and do not retreat from action.</p>
+          <div class="verse-footer">
+            <span class="source-note" data-i18n="verseNote">A plain-language reflection</span>
+            <button class="text-button" id="learnedButton" type="button"><span data-i18n="markLearned">Mark as reflected</span><span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <aside class="journey-card" aria-labelledby="journeyTitle">
+          <div class="journey-heading">
+            <div>
+              <p class="eyebrow small-eyebrow" data-i18n="yourJourney">YOUR JOURNEY</p>
+              <h2 id="journeyTitle" data-i18n="steadySteps">Steady steps.</h2>
+            </div>
+            <span class="journey-icon" aria-hidden="true">✺</span>
+          </div>
+          <div class="progress-label"><span data-i18n="chaptersExplored">Chapters explored</span><span id="progressCount">0 / 18</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Chapters completed" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+          <p class="journey-note" data-i18n="journeyNote">Every thoughtful step is progress. Continue when you're ready.</p>
+          <a class="button button-light" href="#chapters"><span data-i18n="continueButton">Continue learning</span><span aria-hidden="true">→</span></a>
+        </aside>
+      </section>
+
+      <section class="chapters-section section-wrap" id="chapters" aria-labelledby="chaptersTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="theJourney">THE JOURNEY</span></p>
+            <h2 id="chaptersTitle" data-i18n="exploreChapters">Explore the chapters</h2>
+            <p class="section-subtitle" data-i18n="chaptersSubtitle">Eighteen conversations. One timeless path.</p>
+          </div>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+            <input id="chapterSearch" type="search" aria-label="Find a chapter" data-i18n-placeholder="searchPlaceholder" placeholder="Find a chapter">
+            <kbd>/</kbd>
+          </label>
+        </div>
+        <div class="chapter-layout">
+          <div class="chapter-list" id="chapterList" aria-label="Bhagavad Gita chapters"></div>
+          <article class="lesson-panel" id="lessonPanel" aria-live="polite">
+            <div class="lesson-panel-top">
+              <span class="chapter-number-badge" id="lessonNumber">01</span>
+              <span class="lesson-kicker" id="lessonKicker">THE FIRST STEP</span>
+            </div>
+            <h3 id="lessonTitle">Arjuna's Dilemma</h3>
+            <p class="lesson-description" id="lessonDescription"></p>
+            <div class="lesson-meta">
+              <span><span class="meta-icon" aria-hidden="true">▤</span><span id="lessonVerses">47 verses</span></span>
+              <span><span class="meta-icon" aria-hidden="true">◷</span><span data-i18n="minutes">8 min read</span></span>
+            </div>
+            <div class="lesson-divider"></div>
+            <p class="reflection-label" data-i18n="reflectionPrompt">A QUESTION TO CARRY</p>
+            <p class="reflection-text" id="lessonReflection"></p>
+            <button class="button button-dark lesson-button" id="completeButton" type="button"><span data-i18n="completeChapter">Mark chapter complete</span><span aria-hidden="true">→</span></button>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState" hidden data-i18n="noChapters">No chapters found. Try another search.</p>
+      </section>
+
+      <section class="verse-reading section-wrap" id="verseReading" aria-labelledby="readingChapterTitle">
+        <div class="reading-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="readerEyebrow">THE ORIGINAL TEXT</span></p>
+            <h2 id="readingChapterTitle">Arjuna's Dilemma</h2>
+            <p class="section-subtitle" data-i18n="readerSubtitle">Read each Sanskrit shloka with its transliteration.</p>
+          </div>
+          <span class="verse-count-badge" id="readingCount">47 verses</span>
+        </div>
+        <p class="verse-load-status" id="verseLoadStatus" role="status" aria-live="polite" data-i18n="loadingVerses">Loading verses…</p>
+        <div class="verse-list" id="verseList"></div>
+        <p class="verse-source"><span data-i18n="verseSourceIntro">Sanskrit text and transliteration from the </span><a href="https://github.com/gita/gita/blob/main/data/verse.json" target="_blank" rel="noopener noreferrer">BhagavadGita.io dataset</a><span data-i18n="verseSourceLicense">, released under the Unlicense.</span></p>
+      </section>
+
+      <footer class="footer section-wrap">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">ॐ</span><span>gita<span class="brand-period">.</span></span></a>
+        <p data-i18n="footerText">A quiet space to learn, reflect, and return.</p>
+        <span class="footer-sanskrit" lang="sa">योगः कर्मसु कौशलम्</span>
+      </footer>
+    </main>
+    <div class="toast" id="statusMessage" role="status" aria-live="polite"></div>
+  </body>
+</html>
